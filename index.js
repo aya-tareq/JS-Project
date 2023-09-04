@@ -2,45 +2,6 @@ function openNav() {
 
     document.getElementById("mySidenav").style.width = "250px";
 }
-
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    function fetchAPI(url) {
-        return fetch(url)
-            .then(response => response.json())
-            .catch(error => console.log(error));
-    }
-}
-
-async function DisplayRandom() {
-
-
-    var Meals = await fetch('https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast');
-    final = Meals.json;
-    function displayMeals() {
-
-        var cartona = ``;
-        for (var i = 0; i < final.length; i++) {
-
-            cartona += `
-                <div class="col-md-3 shadow-sm p-3 mb-5 text-white bg-black">
-                <div class="card-body">
-                <p>rgueuitpgutg</p>
-                 <img src="${final[i].strMealThumb}" class="card-img-top" alt="...">
-                    <h5 class="card-title">${final[i].strMeal}</h5>
-
-
-                </div>
-                    </div>
-                `
-
-        }
-        document.getElementById('Data').innerHTML = cartona;
-
-    }
-}
-
-
 function showSearchForm() {
     var cartona = ``;
     cartona += `
@@ -126,9 +87,6 @@ async function searchByMealName() {
     } catch (error) {
         console.error('An error occurred during the search:', error);
     }
-}
-function handleClick(meal) {
-    getMealDetails(meal);
 }
 async function getMealDetails(mealName) {
     try {
