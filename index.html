@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="bootstrap.min.css" rel="stylesheet" />
+    <link href="css/fontawesome.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-black" onload="showCategories()">
+    <div id="mySidenav" class="sidenav">
+
+        <ul>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <li><a href="#" onclick="showSearchForm()">Search</a></li>
+            <li><a href="#" onclick="showCategories() ">Categories</a></li>
+            <li><a href="#" onclick="showArea()">Area</a></li>
+            <li><a href="#" onclick="showIngredients()">Ingredients</a></li>
+            <li><a href="#" onclick="showContactForm()">Contact Us</a></li>
+        </ul>
+
+    </div>
+    <div class="div bg-white">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+    </div>
+    <div id="content bg-black">
+        <div class="container">
+            <div id="Data" class="row">
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
